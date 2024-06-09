@@ -8,6 +8,7 @@ from test_pipeline.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_dataset = dataset(spark)
+    df_TransposeAgg_1 = TransposeAgg_1(spark, df_dataset)
 
 def main():
     spark = SparkSession.builder\

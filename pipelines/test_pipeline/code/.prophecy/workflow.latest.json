@@ -71,7 +71,13 @@
     "topLevelPackage" : "test_pipeline",
     "configurationVersion" : "v2"
   },
-  "connections" : [ ],
+  "connections" : [ {
+    "id" : "yqqdjhmXbufLe8N-B8XxY",
+    "source" : "cOKOWGJ4ZypQH5P3NmFKl$$V7Ec_8WNIOWndfZ-PazfH",
+    "sourcePort" : "mfVuBWnrw3uMkPOo8OJd6$$vSu10FCyCsqj0Hf-9rzA1",
+    "target" : "9zh4iKE_vOf2ZNsh73o9c$$LIqOkfXNmwP9ZOKHM-Qa9",
+    "targetPort" : "RQV_5P8AXANcPSZJd4ied$$EZVjfc9sCBLLBg5N9dLor"
+  } ],
   "processes" : {
     "cOKOWGJ4ZypQH5P3NmFKl$$V7Ec_8WNIOWndfZ-PazfH" : {
       "id" : "cOKOWGJ4ZypQH5P3NmFKl$$V7Ec_8WNIOWndfZ-PazfH",
@@ -101,6 +107,67 @@
       "properties" : {
         "datasetId" : "datasets/dataset"
       }
+    },
+    "9zh4iKE_vOf2ZNsh73o9c$$LIqOkfXNmwP9ZOKHM-Qa9" : {
+      "id" : "9zh4iKE_vOf2ZNsh73o9c$$LIqOkfXNmwP9ZOKHM-Qa9",
+      "component" : "TransposeAgg",
+      "metadata" : {
+        "label" : "TransposeAgg_1",
+        "slug" : "TransposeAgg_1",
+        "x" : -820,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RQV_5P8AXANcPSZJd4ied$$EZVjfc9sCBLLBg5N9dLor",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ss",
+              "type" : "date",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "xfxf",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "ce7egYmbS-5SZSM3j_aUK$$hFJNJT3FDDg-ohFRsPA3W",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ ]
+      }
     }
   },
   "ports" : {
@@ -109,5 +176,23 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.9zh4iKE_vOf2ZNsh73o9c$$LIqOkfXNmwP9ZOKHM-Qa9.properties.aggregate",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "At least one aggregate expression is required in Aggregate.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  } ]
 }
