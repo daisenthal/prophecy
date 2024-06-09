@@ -9,3 +9,10 @@ schema:
       description: ''
       mappings: []
       tags: []
+  - name: xfxf
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

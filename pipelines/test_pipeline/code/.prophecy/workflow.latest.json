@@ -84,7 +84,9 @@
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Loads a dataset from the 'test' table in the 'david' database using the Iceberg format.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ ],
